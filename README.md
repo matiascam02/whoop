@@ -68,50 +68,59 @@ PASSWORD=your_whoop_password
 
 Note: Make sure to add the .env file to your .gitignore if you plan to use version control, so your credentials are not exposed.
 
-How It Works
+## How It Works
 
-WHOOP API Integration
-	•	The project uses the whoop package to authenticate with the WHOOP API using your credentials.
-	•	It retrieves various endpoints such as your profile, sleep data, and workout data.
-	•	The JSON data returned by the API is processed with Pandas for further analysis.
+**WHOOP API Integration**
 
-Data Visualization Dashboard
-	•	The dashboard.py script creates an interactive dashboard using Streamlit.
-	•	Sidebar Controls: Users can select a date range for the data they wish to visualize.
-	•	Data Tables: Raw data for sleep and workouts is displayed in interactive tables.
-	•	Charts: Interactive charts (using Plotly) display insights such as sleep duration, sleep performance, workout strain, and average heart rate over time.
+- The project uses the whoop package to authenticate with the WHOOP API using your credentials.
+- It retrieves various endpoints such as your profile, sleep data, and workout data.
+- The JSON data returned by the API is processed with Pandas for further analysis.
 
-Running the Scripts
+**Data Visualization Dashboard**
 
-Running the Basic Script
+- The dashboard.py script creates an interactive dashboard using Streamlit.
+- Sidebar Controls: Users can select a date range for the data they wish to visualize.
+- Data Tables: Raw data for sleep and workouts is displayed in interactive tables.
+- Charts: Interactive charts (using Plotly) display insights such as sleep duration, sleep performance, workout strain, and average heart rate over time.
+
+## Running the Scripts
+
+### Running the Basic Script
 
 To run the basic script that retrieves and processes your WHOOP data, execute:
+
 ```bash
 python main.py
 ```
-This script will:
-	•	Load your WHOOP credentials from the .env file.
-	•	Authenticate with the WHOOP API.
-	•	Fetch and print your profile, sleep data (for the past 7 days by default), and workout data.
 
-Running the Dashboard
+This script will:
+- Load your WHOOP credentials from the .env file.
+- Authenticate with the WHOOP API.
+- Fetch and print your profile, sleep data (for the past 7 days by default), and workout data.
+
+### Running the Dashboard
 
 To launch the interactive dashboard, run:
+
 ```bash
 streamlit run dashboard.py
 ```
+
 A new browser window will open displaying the dashboard. Use the sidebar to select the date range and interact with the visualizations.
 
-Additional Information
-	•	WHOOP API Documentation:
-For detailed information about available endpoints, please refer to the WHOOP API documentation.
-	•	Customization:
-You can extend this project by adding more API endpoints (e.g., cycles, recovery data) or additional visualizations and analytics.
-	•	Troubleshooting:
-	•	Ensure that your .env file is correctly configured with your WHOOP credentials.
-	•	Verify that all required dependencies are installed.
-	•	Check your network connection if you experience issues connecting to the WHOOP API.
+## Additional Information
 
-License
+- **WHOOP API Documentation:**
+  For detailed information about available endpoints, please refer to the [WHOOP API documentation](https://developer.whoop.com/docs).
+
+- **Customization:**
+  You can extend this project by adding more API endpoints (e.g., cycles, recovery data) or additional visualizations and analytics.
+
+- **Troubleshooting:**
+  - Ensure that your .env file is correctly configured with your WHOOP credentials.
+  - Verify that all required dependencies are installed.
+  - Check your network connection if you experience issues connecting to the WHOOP API.
+
+## License
 
 This project is provided for educational purposes. Feel free to modify and extend it as needed.
